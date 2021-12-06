@@ -13,12 +13,12 @@ public class ControllerLogin {
             switch (choice){
                 case 1:
                     Account account = viewLogin.createAccount();
-                    if (accountService.login(account)){
-                        ControllerComputer.menuManagerUser();
-                        break;
-                    }
                     if (accountService.loginAdmin(account)){
                         ControllerComputer.menuManagerAdmin();
+                        break;
+                    }
+                    if (accountService.login(account)){
+                        ControllerComputer.menuManagerUser();
                         break;
                     }
                 case 2:

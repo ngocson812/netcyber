@@ -21,7 +21,10 @@ public class ControllerComputer {
                     }
                     break;
                 case 3:
-
+                    int index1 = computerService.findIndexByName(viewComputer.inputName());
+                    if ( index1 != -1){
+                        computerService.delete(index1);
+                    }
                 case 4:
                     viewComputer.show(computerService.findAll());
                     break;
@@ -34,6 +37,12 @@ public class ControllerComputer {
         ViewComputer viewComputer = new ViewComputer();
         while (true){
             int choice = viewComputer.menuAdmin();
+            switch (choice){
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+            }
         }
     }
 }

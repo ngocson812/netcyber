@@ -25,6 +25,7 @@ public class ComputerService {
 
     public void delete(int index) {
         computers.remove(index);
+        ReadAndWrite.writeComputer(computers);
     }
 
     public void edit(int index, Computer computer) {

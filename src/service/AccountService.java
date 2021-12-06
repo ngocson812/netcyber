@@ -37,7 +37,7 @@ public class AccountService {
     }
 
     public boolean loginAdmin(Account account){
-            if ("admin".equals(account.getUserName()) && "admin".equals(account.getPassWord())){
+            if ("Admin1234".equals(account.getUserName()) && "admin".equals(account.getPassWord())){
                 return true;
             }
         return false;
