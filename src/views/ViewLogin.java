@@ -31,12 +31,39 @@ public class ViewLogin {
         return new Account(userName,passWord);
     }
 
+    public Account accountUpdate(){
+        System.out.println("Nhập tên tài khoản muốn sửa:  ");
+        String userName = getUser();
+        System.out.println("Nhập Password muốn sửa:  ");
+        String passWord = getPass();
+        System.out.println("---------------------------");
+        return new Account(userName,passWord);
+    }
+
+    public Account newAccount(){
+        System.out.println("Nhập tên tài khoản mới:  ");
+        String userName = getUser();
+        System.out.println("Nhập Password mới:  ");
+        String passWord = getPass();
+        System.out.println("---------------------------");
+        return new Account(userName,passWord);
+    }
+
+    public Account removeAccount(){
+        System.out.println("Nhập tên tài khoản muốn xóa:  ");
+        String userName = getUser();
+        System.out.println("Nhập Password muốn xóa:  ");
+        String passWord = getPass();
+        System.out.println("---------------------------");
+        return new Account(userName,passWord);
+    }
+
     public String getUser() {
         String uname = "";
         while (true) {
             System.out.println("Nhập username");
             uname = scanner.nextLine();
-            Pattern p = Pattern.compile("^[A-Z][a-z0-9]{8,}$");
+            Pattern p = Pattern.compile("^[A-Z][a-z 0-9]{7,}$");
             if (p.matcher(uname).find()) {
                 System.out.println("username la : " + uname + "\n" + "----------------------");
                 break;
@@ -49,11 +76,10 @@ public class ViewLogin {
 
     public String getPass() {
         String paswd = "";
-
         while (true) {
             System.out.println("nhap pass : ");
             paswd = scanner.nextLine();
-            Pattern p = Pattern.compile("^[a-z 0-9]{4,}$");
+            Pattern p = Pattern.compile("^[a-z 0-9]{6,}$");
             if (p.matcher(paswd).find()) {
                 System.out.println("\n" + " CHÀO MỪNG BẠN ĐẾN VỚI CYBER PHOENIX ");
                 System.out.println("--------------------------------------------");

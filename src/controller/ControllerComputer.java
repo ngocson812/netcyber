@@ -1,11 +1,14 @@
 package controller;
 
 
+import service.AccountService;
 import service.ComputerService;
 import views.ViewComputer;
+import views.ViewLogin;
 
 public class ControllerComputer {
     public static void menuManagerUser() {
+        int onlineComputer = 0;
         ViewComputer viewComputer = new ViewComputer();
         ComputerService computerService = new ComputerService();
         while (true){
@@ -30,18 +33,36 @@ public class ControllerComputer {
                     break;
                 case 5:
                     return;
+                case 6:
+                    computerService.turnComputer(viewComputer.chooseComputer());
+                    onlineComputer = viewComputer.chooseComputer();
+                    break;
+                case 7:
+                    viewComputer.showOrder();
+                case 8:
+                    System.out.println(computerService.pay(viewComputer.payMoney()));
+                    break;
             }
         }
     }
     public static void menuManagerAdmin() {
         ViewComputer viewComputer = new ViewComputer();
+        ViewLogin viewLogin = new ViewLogin();
+        AccountService accountService = new AccountService();
         while (true){
             int choice = viewComputer.menuAdmin();
             switch (choice){
                 case 1:
+                    accountService.updateAccount(viewLogin.accountUpdate(), viewLogin.newAccount());
+                    break;
                 case 2:
+                    accountService.deleteAccount(viewLogin.removeAccount());
+                    break;
                 case 3:
+                    accountService.showAccount();
+                    break;
                 case 4:
+                    return;
             }
         }
     }
