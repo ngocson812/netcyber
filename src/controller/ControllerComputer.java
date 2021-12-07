@@ -8,7 +8,6 @@ import views.ViewLogin;
 
 public class ControllerComputer {
     public static void menuManagerUser() {
-        int onlineComputer = 0;
         ViewComputer viewComputer = new ViewComputer();
         ComputerService computerService = new ComputerService();
         while (true){
@@ -35,10 +34,12 @@ public class ControllerComputer {
                     return;
                 case 6:
                     computerService.turnComputer(viewComputer.chooseComputer());
-                    onlineComputer = viewComputer.chooseComputer();
+
                     break;
                 case 7:
                     viewComputer.showOrder();
+                    computerService.addOrder(viewComputer.choseOrder());
+                    break;
                 case 8:
                     System.out.println(computerService.pay(viewComputer.payMoney()));
                     break;

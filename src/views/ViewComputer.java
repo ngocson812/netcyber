@@ -69,9 +69,14 @@ public class ViewComputer {
         }
     }
 
-    public String choseOrder(){
+    public int choseOrder(){
         System.out.println("Nhập đồ: ");
-        return scanner.nextLine();
+        String ord = scanner.nextLine();
+        for (Order o : Order.orders) {
+            if (o.equals(ord)) {
+                return o.getPrice();
+            }
+        }
+        return 0;
     }
-
 }

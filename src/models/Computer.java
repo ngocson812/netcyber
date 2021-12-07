@@ -39,7 +39,7 @@ public class Computer implements Serializable{
         this.tenMay = tenMay;
     }
 
-    public long getTienDichVu() {
+    public int getTienDichVu() {
         return tienDichVu;
     }
 

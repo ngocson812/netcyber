@@ -62,10 +62,17 @@ public class ComputerService {
         int money = 0;
         for (Computer com : computers) {
             if (com.getTenMay() == somay) {
-                money = (int) getDateDiff(com.getStartTime(), new Date(), TimeUnit.MINUTES) * 4000;
+                money = (int) getDateDiff(com.getStartTime(), new Date(), TimeUnit.MINUTES) * 4000 + com.getTienDichVu();
                 com.setAvailable(false);
             }
         }
         return money;
+    }
+    public void addOrder(int tiendichvu){
+        for (Computer com : computers ) {
+            if (com.getAvailable()){
+                com.setTienDichVu(com.getTienDichVu() + tiendichvu);
+            }
+        }
     }
 }
