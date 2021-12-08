@@ -6,6 +6,8 @@ import service.ComputerService;
 import views.ViewComputer;
 import views.ViewLogin;
 
+import java.util.Scanner;
+
 public class ControllerComputer {
     public static void menuManagerUser() {
         ViewComputer viewComputer = new ViewComputer();
@@ -34,7 +36,6 @@ public class ControllerComputer {
                     return;
                 case 6:
                     computerService.turnComputer(viewComputer.chooseComputer());
-
                     break;
                 case 7:
                     viewComputer.showOrder();
@@ -42,7 +43,10 @@ public class ControllerComputer {
                     break;
                 case 8:
                     System.out.println(computerService.pay(viewComputer.payMoney()));
+                    computerService.addDoanhthu(computerService.pay(viewComputer.payMoney()));
                     break;
+                case 9:
+                    System.out.println(computerService.getDoanhthu());
             }
         }
     }
@@ -50,9 +54,9 @@ public class ControllerComputer {
         ViewComputer viewComputer = new ViewComputer();
         ViewLogin viewLogin = new ViewLogin();
         AccountService accountService = new AccountService();
-        while (true){
+        while (true) {
             int choice = viewComputer.menuAdmin();
-            switch (choice){
+            switch (choice) {
                 case 1:
                     accountService.updateAccount(viewLogin.accountUpdate(), viewLogin.newAccount());
                     break;

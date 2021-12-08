@@ -6,7 +6,7 @@ import java.util.Date;
 public class Computer implements Serializable{
 
     private String name;
-    private int tenMay;
+    private int soMay;
     private Boolean available;
     private int tienDichVu;
     private Date startTime;
@@ -18,7 +18,7 @@ public class Computer implements Serializable{
 
     public Computer(String name, int tenMay) {
         this.name = name;
-        this.tenMay = tenMay;
+        this.soMay = tenMay;
         this.available = false;
         this.tienDichVu = 0;
     }
@@ -32,11 +32,11 @@ public class Computer implements Serializable{
     }
 
     public int getTenMay() {
-        return tenMay;
+        return soMay;
     }
 
     public void setTenMay(int tenMay) {
-        this.tenMay = tenMay;
+        this.soMay = tenMay;
     }
 
     public int getTienDichVu() {
@@ -76,7 +76,7 @@ public class Computer implements Serializable{
         String status = available ? "online" : "disable";
         return "Computer{" +
                 "name='" + name + '\'' +
-                ", tenMay=" + tenMay +
+                ", tenMay=" + soMay +
                 ", available=" + status +
                 '}';
     }

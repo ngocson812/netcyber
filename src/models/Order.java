@@ -33,6 +33,6 @@ public class Order {
                 '}';
     }
     public static final Order[] orders = {
-            new Order("Sting", 10000), new Order("Coca", 10000), new Order("Bò húc", 20000), new Order("Vinataba", 20000), new Order("555", 50000), new Order("Marlboro", 3000)
+            new Order("Sting", 10000), new Order("Coca", 10000), new Order("Bò húc", 20000), new Order("Vinataba", 20000), new Order("555", 50000), new Order("Marlboro", 3000), new Order("Mì tôm trứng", 25000), new Order("Bánh mì thịt", 25000)
     };
 }

@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class ComputerService {
     ReadAndWrite readAndWrite = new ReadAndWrite();
     private List<Computer> computers = new ArrayList<>();
+    private int doanhthu = 0;
 
     public ComputerService() {
         computers = ReadAndWrite.readComputer();
@@ -75,4 +76,13 @@ public class ComputerService {
             }
         }
     }
+
+    public void addDoanhthu(int tongtien){
+        doanhthu += tongtien;
+    }
+
+    public int getDoanhthu(){
+        return doanhthu;
+    }
+
 }
