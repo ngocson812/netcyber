@@ -1,6 +1,7 @@
 package controller;
 
 
+import io.ReadAndWriteMoney;
 import service.AccountService;
 import service.ComputerService;
 import views.ViewComputer;
@@ -46,7 +47,14 @@ public class ControllerComputer {
                     computerService.addDoanhthu(computerService.pay(viewComputer.payMoney()));
                     break;
                 case 9:
-                    System.out.println(computerService.getDoanhthu());
+                    ReadAndWriteMoney.writeMoney(computerService.getDoanhthu());
+                    System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                    System.out.println("Đã chốt doanh thu ngày ");
+                    System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                    break;
+                case 10:
+                    ReadAndWriteMoney.getDoanhThu();
+                    break;
             }
         }
     }

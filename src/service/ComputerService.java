@@ -84,5 +84,4 @@ public class ComputerService {
     public int getDoanhthu(){
         return doanhthu;
     }
-
 }

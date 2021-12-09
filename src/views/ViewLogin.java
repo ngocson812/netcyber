@@ -104,7 +104,7 @@ public class ViewLogin {
                 System.out.println("nhập phim bat ky de tiep tuc!!  nhap Q để thoat");
                 String quit = scanner.nextLine();
                 if (quit.equalsIgnoreCase("q")){
-                    menuLogin();
+                 //   menuLogin();
                     break;
                 }
             }

@@ -20,7 +20,8 @@ public class ViewComputer {
         System.out.println("\t\t\t\t\t\t\t☣☣      6, Bật máy ☠                                                             ☣☣");
         System.out.println("\t\t\t\t\t\t\t☣☣      7, Dịch vụ ☠                                                             ☣☣");
         System.out.println("\t\t\t\t\t\t\t☣☣      8, Tính tiền ☠                                                           ☣☣");
-        System.out.println("\t\t\t\t\t\t\t☣☣      9, Doanh thu ☠                                                           ☣☣");
+        System.out.println("\t\t\t\t\t\t\t☣☣      9, Chốt doanh thu ngày ☠                                                           ☣☣");
+        System.out.println("\t\t\t\t\t\t\t☣☣      10, Tổng doanh thu ☠                                                           ☣☣");
         System.out.println("\t\t\t\t\t\t\t☣☣♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡☣☣");
         System.out.println();
         System.out.print("\t\t\t\t\t\t\t--------------> Lựa chọn của bạn là ✎ •: ");
@@ -96,12 +97,11 @@ public class ViewComputer {
                 System.out.println("nhập phim bat ky de tiep tuc!!  nhap Q để thoat");
                 String quit = scanner.nextLine();
                 if (quit.equalsIgnoreCase("q")){
-                    menuUser();
+                 //   menuUser();
                     break;
                 }
             }
         } while (!checkChoice);
         return choice;
     }
-
 }
